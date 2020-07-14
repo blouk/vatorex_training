@@ -50,6 +50,8 @@
                                 <t t-if="lang == 'fr_BE'">
                                     <div class="alert alert-danger">French</div>
                                 </t>
+                                <!-- https://requests.readthedocs.io/en/master/ available in Qweb -->
+
                                 <t t-if="request.params.get('var')">
                                     <div class="alert alert-success">Variables
                                         <code>var</code>
@@ -68,7 +70,18 @@
                                 <ul>
                                     <li t-foreach="blog_posts" t-as="blog_post">
                                         <a t-att-href="'/blog/%i' %(blog_post.id)" t-att-alt="blog_post.name"><t t-esc="blog_post.name"/></a>
+                                        <p><t t-esc="blog_post.subtitle"/></p>
                                     </li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h5>Readable as admin only</h5>
+                                <t t-set="res_partners" t-value="request.env['res.partner'].sudo().search([])"/>
+                                <!-- <t t-set="res_partners" t-value="request.env['res.partner'].sudo().search([])"/>  BUT CAREFULL :) -->
+                                <ul>
+                                    <t t-foreach="res_partners" t-as="res_partner">
+                                        <li><span><t t-esc="res_partner.name"/></span></li>
+                                    </t>
                                 </ul>
                             </section>
                         </div>
