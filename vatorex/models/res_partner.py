@@ -7,11 +7,13 @@ class ResPartner(models.Model):
 
     first_name = fields.Char('First Name',required=True,default='First Name')
     last_name = fields.Char('Last Name',required=True,default='Last Name')
-    #computed_name = fields.Char(compute='_compute_name',store=True)
-    name = fields.Char(compute='_compute_name',store=True)
+    name = fields.Char(compute='_compute_name',store=True,required=False,index=True) #maybe to thing about reverse (means give the possibility to edit the computed field name)
     greeting_msg = fields.Text(compute='_compute_greeting_msg',store=True, translate=True)
     type_greeting_msg = fields.Selection([('informal', 'Informal'), ('formal', 'Formal')], required=True, default='formal')
 
+    _sql_constraints = [
+        ('check_name', "CHECK( (type='contact') or (type!='contact') )", 'Contacts require a name'),
+    ] # NEED TO CHECKKK ..... 
 
     @api.depends('first_name','last_name')
     def _compute_name(self):
