@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="qweb_example" model="ir.ui.view">
+        <field name="name">Qweb Examples</field>
+        <field name="type">qweb</field>
+        <field name="key">vatorex.qweb_example</field>
+        <field name="arch" type="xml">
+            <t name="Qweb Example" t-name="vatorex.qweb_example">
+                <t t-call="website.layout">
+                    <div id="wrap">
+                        <div class="container">
+                            <h1>Qweb Examples</h1>
+
+                            <h3 class="mt-4">Variables</h3>
+                            <section>
+                                <t t-set="name_of_variable_string" t-value="'value of variable'"/>
+                                <t t-set="name_of_variable_array" t-value="[1,2,3]"/>
+                                <t t-set="name_of_variable_obj" t-value="{'One':1, 'Two':2}"/>
+                                <p>
+                                    <code>&amp;lt;t-raw='name_of_variable_string'/&amp;gt;</code>:
+                                    <t t-raw="name_of_variable_string"/>
+                                </p>
+                                <p>
+                                    <code>&amp;lt;t-raw='name_of_variable_array'/&amp;gt;</code>:
+                                    <t t-raw="name_of_variable_array"/></p>
+
+                                <p>
+                                    <code>&amp;lt;t-raw='name_of_variable_obj'/&amp;gt;</code>:
+                                    <t t-raw="name_of_variable_obj"/></p>
+                            </section>
+                            <h3 class="mt-4">Loop</h3>
+                            <section>
+                                <div>
+                                    <t t-foreach="name_of_variable_array" t-as="var">
+                                        <t t-esc="var"/>
+                                    </t>
+                                </div>
+
+                                <t t-foreach="name_of_variable_obj" t-as="var">
+                                    <t t-esc="var"/>
+                                    <t t-esc="name_of_variable_obj[var]"/>
+                                </t>
+                            </section>
+                            <h3 class="mt-4">Conditions</h3>
+                            <section>
+                                <t t-raw="lang"/>
+                                <t t-if="lang == 'en_US'">
+                                    <div class="alert alert-warning">English</div>
+                                </t>
+                                <t t-if="lang == 'fr_BE'">
+                                    <div class="alert alert-danger">French</div>
+                                </t>
+                                <t t-if="request.params.get('var')">
+                                    <div class="alert alert-success">Variables
+                                        <code>var</code>
+                                        in the url</div>
+                                </t>
+                                <t t-else="">
+                                    <div class="alert alert-warning">No variable in url</div>
+                                </t>
+                            </section>
+                            <h3 class="mt-4">Data form database</h3>
+                            <section>
+                                <t t-set="blog_posts" t-value="request.env['blog.post'].search([],order='id')"/>
+                                <p>
+                                    <code>Recordset:</code><t t-raw="blog_posts"/></p>
+                                <h5>All Blog posts</h5>
+                                <ul>
+                                    <li t-foreach="blog_posts" t-as="blog_post">
+                                        <a t-att-href="'/blog/%i' %(blog_post.id)" t-att-alt="blog_post.name"><t t-esc="blog_post.name"/></a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="vatorex_qweb_example" model="website.page">
+        <field name="website_published">True</field>
+        <field name="url">/qweb_example</field>
+        <field name="name">Vatorex Qweb Example</field>
+        <field name="view_id" ref="vatorex.qweb_example"/>
+    </record>
+</odoo>
