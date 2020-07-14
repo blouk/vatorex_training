@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_view_form" model="ir.ui.view">
+        <field name="name">res.partner.view.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//h1" position="after">
+                <h2>
+                    <field name="type_greeting_msg"/><br/>
+                    <label for="first_name"/>
+                    <field name="first_name"/><br/>
+                    <label for="last_name"/>
+                    <field name="last_name"/><br/>
+                    <field name="greeting_msg"/>
+                    <field name="type_greeting_msg"/>
+                    <!-- <field name="computed_name"/> -->
+                </h2>
+            </xpath>
+	    </field>
+    </record>
+
+
+
+</odoo>

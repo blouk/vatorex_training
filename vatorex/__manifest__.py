@@ -30,6 +30,7 @@
 
         #backend
         'views/backend/blog_post_form.xml',
+        'views/backend/res_partner_form.xml',
 
 
         # pages

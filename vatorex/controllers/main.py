@@ -30,6 +30,9 @@ class WebsiteForm(http.Controller):
             #send email
             mail = request.env['mail.mail']
 
+
+            
+
             template_data = {
                 'subject': 'Subject of email ' + str(random()),
                 'body_html': 'Message' + str(random()),
@@ -39,6 +42,11 @@ class WebsiteForm(http.Controller):
             }
             mail.create(template_data)
             values.update({'sended':True})
+
+
+            #Example
+            # if post['subscribe']:
+            #     logic
 
         #return the tample with values
         values.update({'user':user})

@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <t name="Simple Form" t-name="vatorex.simple_form">
                 <t t-call="website.layout">
-                    <div id="wrap">
+                    <div id="wrap" class="oe_structure">
                         <div class="container">
                             <h1 class="mt16">Form</h1>
                             <div class="card card-outline-secondary">

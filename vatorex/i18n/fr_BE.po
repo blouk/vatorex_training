@@ -1,0 +1,176 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* vatorex
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-14 14:30+0200\n"
+"PO-Revision-Date: 2020-07-14 12:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 2.3.1\n"
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "<code>&amp;lt;t-raw='name_of_variable_array'/&amp;gt;</code>:"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "<code>&amp;lt;t-raw='name_of_variable_obj'/&amp;gt;</code>:"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "<code>&amp;lt;t-raw='name_of_variable_string'/&amp;gt;</code>:"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "<code>Recordset:</code>"
+msgstr "<code>Recordset FR:</code>"
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "All Blog posts"
+msgstr ""
+
+#. module: vatorex
+#: model:ir.model.fields,field_description:vatorex.field_blog_post__language_available_ids
+msgid "Available in"
+msgstr ""
+
+#. module: vatorex
+#: model:ir.model,name:vatorex.model_blog_post
+msgid "Blog Post"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.simple_form
+msgid "Company"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "Conditions"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.view_blog_post_form
+msgid "Content"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "Data form database"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.simple_form
+msgid "Email"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "English"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.simple_form
+#: model:website.menu,name:vatorex.menu_form_page
+msgid "Form"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "French"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "Loop"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.simple_form
+msgid "Name"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.index
+msgid "No post."
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "No variable in url"
+msgstr ""
+
+#. module: vatorex
+#: model:website.menu,name:vatorex.menu_qweb_example_page
+msgid "Qweb"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "Qweb Examples"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.simple_form
+msgid "Simple Form"
+msgstr "Simple FORM FR"
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.simple_form
+msgid "User updated (email and lead created too)!"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid "Variables"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.qweb_example
+#: model_terms:website.page,arch_db:vatorex.vatorex_qweb_example
+msgid ""
+"Variables\n"
+"                                        <code>var</code>\n"
+"                                        in the url"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.simple_form
+msgid "Website"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.view_blog_post_form
+msgid "content"
+msgstr ""
+
+#. module: vatorex
+#: model_terms:ir.ui.view,arch_db:vatorex.simple_form
+msgid "email"
+msgstr "email FR"
