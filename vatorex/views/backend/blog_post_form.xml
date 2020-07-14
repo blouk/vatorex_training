@@ -5,9 +5,18 @@
         <field name="model">blog.post</field>
         <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
         <field name="arch" type="xml">
+
             <xpath expr="//field[@name='website_id']" position="after">
                 <field name="language_available_ids" widget="many2many_tags"/>
             </xpath>
+
+            <!-- add the content in the backend -->
+            <xpath expr="//page[@name='seo']" position="after">
+                <page name="content" string="Content">
+                    <field name="content" string="content"/>
+                </page>
+            </xpath>
         </field>
     </record>
+
 </odoo>

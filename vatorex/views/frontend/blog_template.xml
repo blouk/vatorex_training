@@ -2,7 +2,13 @@
 <odoo>
     <template id="index" inherit_id="website_blog.index">
         <xpath expr="//div[@id='wrap']" position="inside">
-            <t t-raw="lang"/>
+            <t t-if="not posts">
+                <div class="container">
+                    <div class="alert alert-warning">
+                        No post.
+                    </div>
+                </div>
+            </t>
         </xpath>
     </template>
 </odoo>
